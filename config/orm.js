@@ -1,6 +1,7 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
+
 // Helper function for SQL syntax.
 function selectAll(table, callback) {
     var query = 'SELECT * FROM ' + table;
@@ -43,5 +44,11 @@ function updateOne(table, column, value, id, callback) {
 }
 
 
-// Export the orm object for the model (cat.js).
-module.exports = orm;
+// Export the orm object for the model
+module.exports = {
+    selectAll    : selectAll,
+    selectBurger : selectBurger,
+    selectOne    : selectOne,
+    insertOne    : insertOne,
+    updateOne    : updateOne
+}
