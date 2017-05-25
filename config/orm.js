@@ -1,8 +1,14 @@
-// Import MySQL connection.
-var connection = require("../config/connection.js");
+// require the database connection
+var connection = require('./connection.js');
 
+module.exports = {
+    selectAll    : selectAll,
+    selectScoped : selectScoped,
+    selectOne    : selectOne,
+    insertOne    : insertOne,
+    updateOne    : updateOne
+};
 
-// Helper function for SQL syntax.
 function selectAll(table, callback) {
     var query = 'SELECT * FROM ' + table;
     connection.query(query, function(error, data) {
@@ -11,7 +17,7 @@ function selectAll(table, callback) {
     });
 }
 
-function selectBurger(table, column, value, callback) {
+function selectScoped(table, column, value, callback) {
     var query = 'SELECT * FROM ' + table + ' WHERE ' + column + ' = ' + value;
     connection.query(query, function(error, data) {
         if (error) throw error;
@@ -41,14 +47,4 @@ function updateOne(table, column, value, id, callback) {
         if (error) throw error;
         callback();
     });
-}
-
-
-// Export the orm object for the model
-module.exports = {
-    selectAll    : selectAll,
-    selectBurger : selectBurger,
-    selectOne    : selectOne,
-    insertOne    : insertOne,
-    updateOne    : updateOne
 }

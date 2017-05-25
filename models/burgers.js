@@ -3,12 +3,12 @@ var orm = require('../config/orm.js');
 
 // export the model
 module.exports = {
-	allBurgers	: burgers,
-	wholeBurgers: wholeBurgers,
-	devouredBurgers: devouredBurgers,
-	create		: create,
-	singleBurger: singleBurger,
-	update		: update
+	allBurgers		: burgers,
+	wholeBurgers	: wholeBurgers,
+	devouredBurgers	: devouredBurgers,
+	create			: create,
+	singleBurger	: singleBurger,
+	update			: update
 };
 
 // get all the burgers return object with whole and devoured burgers
