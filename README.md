@@ -19,7 +19,7 @@ database, separated into `eaten` and `uneaten`.
 The user also has the ability to create a new burger. This utilizes a `POST`
 request that creates the new burger in the database.
 
-When the `Devour` or 'Re-Order' button is selected, the burger is updated in the database
+When the `Devour` or `Re-Order` button is selected, the burger is updated in the database
 using a `PUT` request.
 
 ### API
@@ -34,7 +34,7 @@ specific burger. This is also done through a `GET` request.
 
 ## Data
 
-Each burger has an `id`, `burger_name`, 'image', `devoured`, and `created_at`. The `id`
+Each burger has an `id`, `burger_name`, `image`, `devoured`, and `created_at`. The `id`
 is the primary key and is auto-incremented. You will notice that when a user
 creates a new burger they are only submitting the name and image url of the burger. This is
 because the `devoured` and `created_at` attributes have default values. The
