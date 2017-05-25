@@ -1,5 +1,6 @@
 # Devour Burger
-[![Devour Burger ScreenCapture](/public/assets/img/ScreenCapture.JPG)](https://youtu.be/VRrk3-udC70)
+[![Devour Burger Click to open YouTube video](/public/assets/img/ScreenCapture.JPG)](https://youtu.be/VRrk3-udC70)
+click to open youtube video of app in action
 
 A simple app using:
 [Node.js](https://nodejs.org/en/), 
